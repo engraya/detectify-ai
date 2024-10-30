@@ -14,8 +14,8 @@ let detectInterval;
 const ObjectDetection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  const webcamRef = useRef(null);
-  const canvasRef = useRef(null);
+  const webcamRef = useRef<Webcam>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   async function runCoco() {
     setIsLoading(true); // Set loading state to true when model loading starts
@@ -27,7 +27,7 @@ const ObjectDetection = () => {
     }, 10);
   }
 
-  async function runObjectDetection(net) {
+  async function runObjectDetection(net : any) {
     if (
       canvasRef.current &&
       webcamRef.current !== null &&
