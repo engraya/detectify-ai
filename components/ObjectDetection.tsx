@@ -9,6 +9,9 @@ import '@tensorflow/tfjs-backend-cpu';
 import '@tensorflow/tfjs-backend-webgl';
 import LoadingSpinner from "./LoadingSpinner";
 
+
+
+
 let detectInterval;
 
 const ObjectDetection = () => {
@@ -24,21 +27,21 @@ const ObjectDetection = () => {
 
     detectInterval = setInterval(() => {
       runObjectDetection(net); // will build this next
-    }, 10);
+    }, 5);
   }
 
   async function runObjectDetection(net : any) {
     if (
-      canvasRef.current &&
-      webcamRef.current !== null &&
-      webcamRef.current.video?.readyState === 4
+      canvasRef?.current &&
+      webcamRef?.current !== null &&
+      webcamRef?.current?.video?.readyState === 4
     ) {
-      canvasRef.current.width = webcamRef.current.video.videoWidth;
-      canvasRef.current.height = webcamRef.current.video.videoHeight;
+      canvasRef.current.width = webcamRef?.current?.video?.videoWidth;
+      canvasRef.current.height = webcamRef?.current?.video?.videoHeight;
 
       // find detected objects
       const detectedObjects = await net.detect(
-        webcamRef.current.video,
+        webcamRef?.current?.video,
         undefined,
         0.6
       );
