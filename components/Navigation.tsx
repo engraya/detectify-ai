@@ -50,8 +50,9 @@ export default function Navigation() {
         {/* LOGO */}
 
         <div className='flex items-center w-full'>
-          <Link href='/' >
+          <Link href='/' className='flex gap-4'>
             <Image width={50} height={50} src={newLogo2} alt='r3dy-logo-full' />
+            <h1 className='bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent text-xl md:text-3xl whitespace-nowrap  flex justify-center items-center font-extrabold hover:text-[#1478eb]'>Detectify-AI</h1>
           </Link>
         </div>
 
@@ -71,7 +72,7 @@ export default function Navigation() {
 
         <div className='flex w-full h-full justify-end'>
           <button className='nav-link p-2 mr-2 bg-white rounded-md hover:bg-slate-200 flex items-center' onClick={enableDarkMode}><Image width={28} height={28} src={ !darkModeState ? '/moon.svg' : '/sun-white.svg'} alt={ !darkModeState ? 'moon-icon' : 'sun-icon'} /></button>
-          <Link href='https://github.com/oslabs-beta/r3Dy' target='_blank' className='nav-link p-2 bg-white rounded-md hover:bg-slate-200'><Image width={26} height={26} src={darkModeState ? '/github-white.svg' : '/github.svg'} alt='github-icon' /></Link>
+          <Link href='https://github.com/engraya/detectify-ai' target='_blank' className='nav-link p-2 bg-white rounded-md hover:bg-slate-200'><Image width={26} height={26} src={darkModeState ? '/github-white.svg' : '/github.svg'} alt='github-icon' /></Link>
 
           {/* MOBILE HAMBURGER */}
           <button className='nav-link md:hidden p-2 ml-2 bg-white rounded-md hover:bg-slate-200 flex items-center' onClick={() => { setDropdown(!dropdown) }} ><Image width={24} height={24} src={darkModeState ? '/menu-white.svg' : '/menu.svg'} alt='menu-icon' /></button>

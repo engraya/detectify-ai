@@ -26,10 +26,10 @@ export default function Home() {
         <div className="p-4 max-w-[1024px]">
           <div className='flex justify-center md:justify-start'>
           </div>
-          <h1 id='main-header' className="basic-transition text-5xl font-black text-center md:text-left mb-8">Detectify AI – Next-gen Object Detection Powered by AI</h1>
+          <h1 id='main-header' className="basic-transition text-5xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl md:text-6xl font-blac text-center md:text-left mb-8">Detectify AI – Next-gen Object Detection Powered by AI</h1>
           <p id='landing-text' className="basic-transition text-[#415A77] text-base font-medium leading-normal text-center md:text-left dark:text-slate-50">Discover the future of object detection with Detectify AI. Powered by advanced artificial intelligence, Detectify AI provides real-time, accurate object recognition for a wide range of applications. Whether you're enhancing security, boosting automation, or integrating smart technology, Detectify AI is your go-to solution for intelligent vision.</p>
           <div className="md:my-8 mt-8 md:block flex flex-col items-center">
-            <Link href="#" target='_blank'>
+            <Link href="https://github.com/engraya/detectify-ai" target='_blank'>
             <button className="flex gap-2 font-mono items-center py-2 px-4 bg-slate-200 rounded-md text-sm mb-7 ease-linear transition duration-150 hover:bg-slate-300">
               Conribute 
               <FaGithub className='flex justify-center items-center'/>

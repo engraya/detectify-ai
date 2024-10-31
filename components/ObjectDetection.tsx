@@ -46,6 +46,7 @@ const ObjectDetection = () => {
       //   console.log(detectedObjects);
 
       const context = canvasRef.current.getContext("2d");
+      // @ts-ignore
       renderPredictions(detectedObjects, context);
     }
   }
@@ -69,7 +70,7 @@ const ObjectDetection = () => {
   }, []);
 
   return (
-    <div className="mt-8">
+    <div className="mt-2">
       {isLoading ? (
         <>
           <LoadingSpinner/>
@@ -79,13 +80,13 @@ const ObjectDetection = () => {
           {/* webcam */}
           <Webcam
             ref={webcamRef}
-            className="rounded-md w-full lg:h-[720px]"
+            className="rounded-md w-full h-[500px] lg:h-[720px]"
             muted
           />
           {/* canvas */}
           <canvas
             ref={canvasRef}
-            className="absolute top-0 left-0 z-99999 w-full lg:h-[720px]"
+            className="absolute top-0 left-0 z-99999 h-[500px] w-full lg:h-[720px]"
           />
         </div>
       )}
